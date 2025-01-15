@@ -13,6 +13,6 @@ fun Application.configureHTTP() {
         allowHeader(HttpHeaders.ContentType)
         allowHeader(HttpHeaders.Authorization)
         allowCredentials = true
-        allowHost("*", schemes = listOf("https"))  // Allow all origins for testing
+        allowHost("ptbox-frontend.vercel.app", schemes = listOf("https"))
     }
 }
