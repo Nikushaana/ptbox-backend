@@ -13,6 +13,9 @@ fun Application.configureHTTP() {
         allowHeader(HttpHeaders.ContentType)
         allowHeader(HttpHeaders.Authorization)
         allowCredentials = true
-        allowHost("ptbox-frontend.vercel.app", schemes = listOf("http", "https"))
+        // You can specify "*" to allow all hosts for now to see if CORS is the issue
+        allowHost("ptbox-frontend.vercel.app", schemes = listOf("https"))
+        allowHost("your-backend-server-url.com", schemes = listOf("https")) // Update with your backend URL
+        allowHost("*", schemes = listOf("https")) // Allow any origin for testing
     }
 }
