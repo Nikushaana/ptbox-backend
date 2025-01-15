@@ -5,7 +5,7 @@ FROM openjdk:17-jdk-slim
 WORKDIR /app
 
 # Copy the build output
-COPY ./build/libs/*.jar app.jar
+COPY build/libs/ptboxchallenge-0.0.1.jar app.jar
 
 # Expose the application port (update if needed)
 EXPOSE 8080
