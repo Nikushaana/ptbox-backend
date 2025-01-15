@@ -10,8 +10,8 @@ fun Application.configureHTTP() {
         allowMethod(HttpMethod.Post)
         allowMethod(HttpMethod.Put)
         allowMethod(HttpMethod.Delete)
-//        allowHeader(HttpHeaders.ContentType)
-//        allowHeader(HttpHeaders.Authorization)
+        allowHeader(HttpHeaders.ContentType)
+        allowHeader(HttpHeaders.Authorization)
         allowCredentials = true
         // You can specify "*" to allow all hosts for now to see if CORS is the issue
         allowHost("ptbox-frontend.vercel.app", schemes = listOf("https"))
